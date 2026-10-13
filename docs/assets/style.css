@@ -8,12 +8,12 @@
 }
 
 :root {
-  --bg: #d6e6f7;
+  --bg: #fbf8f2;
   --surface: #ffffff;
-  --sand: #c3d8f0;
+  --sand: #f3ece0;
   --ink: #1f2a37;
   --muted: #5b6573;
-  --line: #b8cce6;
+  --line: #e8e0d2;
 
   --red: #d8503f;
   --yellow: #f0b73e;
@@ -74,7 +74,7 @@ p { margin: 0 0 1em; }
 /* ---------- Navigation ---------- */
 .nav {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(214, 230, 247, .8);
+  background: rgba(251, 248, 242, .78);
   -webkit-backdrop-filter: saturate(180%) blur(18px);
   backdrop-filter: saturate(180%) blur(18px);
   border-bottom: 1px solid transparent;
@@ -127,7 +127,7 @@ p { margin: 0 0 1em; }
 .hero .btns { justify-content: center; }
 .hero-media { position: relative; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
 .hero-media img {
-  width: 100%; aspect-ratio: 1920 / 1080; object-fit: cover; object-position: 50% 0%;
+  width: 100%; aspect-ratio: 1920 / 1080; object-fit: cover; object-position: 50% 40%;
   border-radius: clamp(28px, 5vw, 64px);
   box-shadow: var(--shadow);
 }
