@@ -81,12 +81,12 @@ p { margin: 0 0 1em; }
   transition: border-color .3s;
 }
 .nav.scrolled { border-color: var(--line); }
-.nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 2rem; height: 64px; max-width: calc(var(--wrap) + 160px); }
 .brand { display: flex; align-items: center; gap: .65rem; text-decoration: none; color: var(--ink); }
 .brand svg { width: 46px; height: 28px; flex: none; }
 .brand span { font-family: var(--display); font-weight: 600; font-size: 1.05rem; line-height: 1.05; letter-spacing: -.01em; }
 .brand small { display: block; font-family: var(--text); font-weight: 500; font-size: .72rem; color: var(--muted); letter-spacing: .02em; }
-.nav ul { display: flex; gap: clamp(1rem, 1.6vw, 1.6rem); list-style: none; margin: 0; padding: 0; }
+.nav ul { display: flex; gap: 1.2rem; list-style: none; margin: 0; padding: 0; }
 .nav ul a { color: var(--ink); text-decoration: none; font-size: .9rem; opacity: .82; white-space: nowrap; }
 .nav ul a:hover { opacity: 1; }
 .nav .cta-small {
@@ -96,7 +96,7 @@ p { margin: 0 0 1em; }
 .menu-btn { display: none; background: none; border: 0; padding: 8px; margin-right: -8px; color: var(--ink); cursor: pointer; }
 .menu-btn svg { width: 24px; height: 24px; }
 
-@media (max-width: 1140px) {
+@media (max-width: 1239px) {
   .nav ul, .nav .cta-small { display: none; }
   .menu-btn { display: block; }
   .nav.open ul {
