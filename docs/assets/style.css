@@ -86,8 +86,8 @@ p { margin: 0 0 1em; }
 .brand svg { width: 46px; height: 28px; flex: none; }
 .brand span { font-family: var(--display); font-weight: 600; font-size: 1.05rem; line-height: 1.05; letter-spacing: -.01em; }
 .brand small { display: block; font-family: var(--text); font-weight: 500; font-size: .72rem; color: var(--muted); letter-spacing: .02em; }
-.nav ul { display: flex; gap: 1.6rem; list-style: none; margin: 0; padding: 0; }
-.nav ul a { color: var(--ink); text-decoration: none; font-size: .9rem; opacity: .82; }
+.nav ul { display: flex; gap: clamp(1rem, 1.6vw, 1.6rem); list-style: none; margin: 0; padding: 0; }
+.nav ul a { color: var(--ink); text-decoration: none; font-size: .9rem; opacity: .82; white-space: nowrap; }
 .nav ul a:hover { opacity: 1; }
 .nav .cta-small {
   background: var(--ink); color: #fff; text-decoration: none; font-size: .85rem; font-weight: 600;
@@ -96,7 +96,7 @@ p { margin: 0 0 1em; }
 .menu-btn { display: none; background: none; border: 0; padding: 8px; margin-right: -8px; color: var(--ink); cursor: pointer; }
 .menu-btn svg { width: 24px; height: 24px; }
 
-@media (max-width: 960px) {
+@media (max-width: 1140px) {
   .nav ul, .nav .cta-small { display: none; }
   .menu-btn { display: block; }
   .nav.open ul {
@@ -293,3 +293,21 @@ footer nav a:hover { color: var(--ink); }
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+/* ---------- Jahresbericht ---------- */
+.tabs { display: inline-flex; gap: .3rem; padding: .3rem; background: var(--surface); border-radius: 999px; box-shadow: var(--shadow); margin-bottom: clamp(1.75rem, 4vw, 2.75rem); }
+.tab {
+  font: 600 1rem/1 var(--text); color: var(--muted); background: none; border: 0; cursor: pointer;
+  padding: .75rem 1.4rem; border-radius: 999px; transition: background .2s, color .2s;
+}
+.tab:hover { color: var(--ink); }
+.tab[aria-selected="true"] { background: var(--ink); color: #fff; }
+.tab:focus-visible, .panel:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+.panel { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(2rem, 6vw, 5rem); align-items: start; border-radius: var(--radius); }
+.panel[hidden] { display: none; }
+.panel-intro .year { font-family: var(--display); font-size: clamp(4rem, 10vw, 7rem); font-weight: 600; line-height: .9; margin: 0 0 .5rem; color: var(--blue); }
+#jahr-2024 .year { color: var(--red); }
+#jahr-2025 .year { color: var(--green); }
+.panel-intro p:last-child { color: var(--muted); }
+.report-note { margin: clamp(2rem, 4vw, 3rem) 0 0; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .95rem; }
+@media (max-width: 860px) { .panel { grid-template-columns: 1fr; gap: 1.5rem; } }
